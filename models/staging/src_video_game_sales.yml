@@ -1,0 +1,36 @@
+version: 2
+
+sources:
+  - name: raw
+    database: e-commerce-gcp-461108
+    schema: dbt_videogames_project
+    tables:
+      - name: vgsales_dbt
+        description: "Raw video game sales data loaded from external source"
+        columns:
+          - name: Rank
+            description: "Sales rank of the game"
+          - name: Name
+            description: "Name of the video game"
+          - name: Platform
+            description: "Platform the game was released on"
+          - name: Year
+            description: "Year of release"
+          - name: Genre
+            description: "Genre of the game"
+          - name: Publisher
+            description: "Publisher of the game"
+          - name: NA_Sales
+            description: "Sales in North America (in millions)"
+          - name: EU_Sales
+            description: "Sales in Europe (in millions)"
+          - name: JP_Sales
+            description: "Sales in Japan (in millions)"
+          - name: Other_Sales
+            description: "Sales in other regions (in millions)"
+          - name: Global_Sales
+            description: "Total global sales (in millions)"
+          - name: Name
+            tests: [not_null]
+          - name: Global_Sales
+            tests: [not_null]
