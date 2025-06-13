@@ -1,0 +1,8 @@
+# dbt artifacts
+target/
+dbt_modules/
+logs/
+*.log
+*.csv
+*.json
+.env
