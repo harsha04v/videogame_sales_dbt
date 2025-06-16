@@ -1,6 +1,6 @@
 with base as (
     select * from {{ ref('stg_video_game_sales')}}
-)
+),
 
 enriched as (
     select * ,
@@ -9,7 +9,7 @@ enriched as (
                 when global_sales >= 1 then 'Hit'
                 else 'Low Performer'
             end as sales_category,
-            extract(decade from date_from_unix_date(365 * release_year)) as release_decade
+            CAST(FLOOR(release_year / 10) * 10 AS INT64) AS release_decade
     from base
 )
 

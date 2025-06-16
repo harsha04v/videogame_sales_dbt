@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: dim_games
+    description: "Dimension table for unique video games"
+    columns:
+      - name: game_name
+        tests: [not_null]
+      - name: platform
+        tests: [not_null]
+
+  - name: fact_sales
+    description: "Fact table for video game sales"
+    columns:
+      - name: global_sales
+        tests: [not_null]
+      - name: sales_category
+        tests:
+          - accepted_values:
+              values: ['Blockbuster', 'Hit', 'Low Performer']
