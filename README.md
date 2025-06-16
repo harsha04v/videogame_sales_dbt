@@ -5,6 +5,14 @@ The **Video Game Sales Analytics** project is a data transformation pipeline bui
 
 This project simulates real-world data engineering workflows, including modular SQL modeling, testing, documentation, and version control.
 ---
+## 🧰 Tools & Technologies
+
+- **dbt** – SQL-based transformation and modeling
+- **BigQuery** – Cloud data warehouse
+- **SQL** – Core transformation logic
+- **Git & GitHub** – Version control and collaboration
+
+---
 
 ## 🏗️ Project Architecture
 
